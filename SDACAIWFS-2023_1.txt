@@ -1,0 +1,45 @@
+###################
+51.9694176,7.5954875
+https://cityscope.media.mit.edu/backend/API/
+###################
+##CityIO##
+git clone https://github.com/phuef/cityscope.git
+cd /home/fjsarmientop/Desktop/SDACAIWFS-2023_1/Examples/CS_CityIO
+docker build -t cityio
+sudo docker build - < Dockerfile
+
+git clone https://github.com/CityScope/CS_CityIO cityio
+cd C:\Users\Usuario\Desktop\CityScope\cityio
+docker build -t cityio .
+
+redis-server --daemonize yes
+redis-cli ping
+redis-cli INFO
+
+git clone https://github.com/phuef/CS_cityIO_Flask.git cityIO_Flask
+cd C:\Users\Usuario\Desktop\CityScope\cityIO_Flask
+python cityio_lite.py corktown epa hcm volpe münster
+
+cd C:\Users\Usuario\Desktop\CityScope\cityio\base
+curl http://localhost:8080/api/tables/list/
+curl -X POST -d @geo1_base.json --header "Content-Type: application/json" http://localhost:8080/api/table/geo1/
+curl http://localhost:8080/api/table/geo1/
+curl http://localhost:8080/api/table/geo1/GEOGRID
+curl -X DELETE http://localhost:8080/api/table/geo1/
+curl -X DELETE http://localhost:8080/api/table/test/
+###################
+##CityscopeJS##
+cd C:\Users\Usuario\Desktop\CityScope
+git clone https://github.com/CityScope/CS_cityscopeJS cityscopeJS
+cd cityscopeJS
+npm install
+npm start
+http://localhost:3000/CS_cityscopeJS/?editor
+
+C:\Users\Usuario\Desktop\CityScope\cityscopeJS\src\settings\settings.js
+###################
+##CityScoPy##
+cd /home/fjsarmientop/Desktop/SDACAIWFS-2023_1/Examples/CS_CityScoPy
+python3 cityscopy.py --cityscopy setup --table_name test
+python3 cityscopy.py --cityscopy scan --table_name test
+###################
